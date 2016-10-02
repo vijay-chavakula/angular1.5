@@ -23,7 +23,7 @@ gulp.task('bower', function () {
 
 gulp.task('copyBowerComponents', function () {
   gulp.src('./bower_components/**/*')
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./dist/bower_components/'));
 });
 
 gulp.task('jshint', function() {

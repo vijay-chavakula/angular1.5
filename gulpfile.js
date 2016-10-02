@@ -21,6 +21,11 @@ gulp.task('bower', function () {
     .pipe(gulp.dest('./dist'));
 });
 
+gulp.task('copyBowerComponents', function () {
+  gulp.src('./bower_components/**/*')
+    .pipe(gulp.dest('./dist'));
+});
+
 gulp.task('jshint', function() {
   return gulp
     .src('./src/js/**/*.js')
@@ -76,5 +81,6 @@ gulp.task('build',function(callback){
               'copyHtml',
               ['copyImages', 'minifyCss', 'uglifyJs'],
               'inject',
+              'copyBowerComponents',
               callback);
 });

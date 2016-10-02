@@ -39,6 +39,12 @@ gulp.task('copyImages', function () {
   	.pipe(gulp.dest('./dist/images'));
 });
 
+gulp.task('copyHtml', function () {
+  return gulp
+    .src('src/**/*.html')
+    .pipe(gulp.dest('./dist/'));
+});
+
 gulp.task('uglifyJs',function () {
   return gulp
     .src('src/js/**/*.js')
@@ -66,7 +72,8 @@ gulp.task('inject', function () {
 
 gulp.task('build',function(callback){
 	runSequence('clean',
-				      'jshint',
+              'jshint',
+              'copyHtml',
               ['copyImages', 'minifyCss', 'uglifyJs'],
               'inject',
               callback);

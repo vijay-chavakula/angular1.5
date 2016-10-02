@@ -1,3 +1,3 @@
 (function(){
-	var app= angular.module('rentSeller', ['ngMaterial']);
+	var app= angular.module('rentSeller', ['ngMaterial','listComponents']);
 })();

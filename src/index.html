@@ -16,6 +16,8 @@
           padding-top: 5px;
         }
       </style>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     </head>
     <body ng-app="rentSeller" layout="column">
       <!-- bower:js -->
@@ -28,12 +30,12 @@
       </md-toolbar>
       <div class="container" layout="row" flex>
         <md-sidenav md-is-locked-open="true" class="md-whiteframe-4dp">
-          <md-list>
-            <list-component message="Books" iconclass="icon-home" ></list-component>
-            <list-component message="Automobiles" iconclass="icon-home" ></list-component>
-            <list-component message="Electronics" iconclass="icon-home" ></list-component>
-            <list-component message="Apparel" iconclass="icon-home" ></list-component>
-            <list-component message="House" iconclass="icon-home" ></list-component>
+          <md-list layout="column">
+            <list-component message="Books" iconclass="face" ></list-component>
+            <list-component message="Automobiles" iconclass="face" ></list-component>
+            <list-component message="Electronics" iconclass="face" ></list-component>
+            <list-component message="Apparel" iconclass="face" ></list-component>
+            <list-component message="House" iconclass="face" ></list-component>
           </md-list>
         </md-sidenav>
         <md-content id="content"  flex>          
